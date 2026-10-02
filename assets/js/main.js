@@ -29,4 +29,24 @@
     var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
     if (/mac/i.test(platform) && !isIOS) select(document.getElementById('tab-mac'), false);
   }
+
+  // Eventos de GA4 (si gtag no existe, no hace nada)
+  var track = function (name, params) {
+    try { if (typeof gtag === 'function') gtag('event', name, params); } catch (e) {}
+  };
+  var placementOf = function (el) {
+    if (el.closest('.grille')) return 'parrilla';
+    if (el.closest('.install')) return 'instalacion';
+    if (el.closest('.closing')) return 'cierre';
+    if (el.closest('.hero')) return 'hero';
+    return 'otro';
+  };
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    if (a.dataset.os) track('download_click', { os: a.dataset.os, placement: placementOf(a) });
+    else if (a.dataset.provider) track('api_key_click', { provider: a.dataset.provider });
+    else if (a.closest('.lang')) track('language_switch', { to: a.getAttribute('lang') });
+    else if (/youtu\.be|youtube\.com/.test(a.href) && a.closest('.after')) track('install_video_click', {});
+  });
 })();
