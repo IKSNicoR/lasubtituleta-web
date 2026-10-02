@@ -344,3 +344,21 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; backgrou
 /* Títulos en un solo renglón (primera parte regular, remate en bold) */
 .sec-title.one-line { max-width: none; }
 .sec-title.one-line .h-reg, .sec-title.one-line .h-bold { display: inline; margin-top: 0; }
+
+/* Celular v2 (2026-10-02) */
+@media (max-width: 700px) {
+  /* Parrilla limpia: sin etiquetas ni velo blanco (las zonas siguen siendo tocables) */
+  .hs-label { display: none; }
+  .hs-shape { opacity: 0 !important; }
+  /* Cierre: la foto del frente (cartel) arriba, con su proporción original, y el texto debajo sobre azul */
+  .closing { display: block; min-height: 0; overflow: visible; }
+  .closing::after { display: none; }
+  .closing-pic { display: block; position: relative; }
+  .closing-bg { position: static; width: 100%; height: auto; aspect-ratio: 1668 / 943; object-fit: cover; object-position: center; }
+  .closing-pic::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22%; background: linear-gradient(0deg, var(--navy) 0%, rgba(12, 43, 74, 0) 100%); }
+  .closing-inner { padding-top: 4px; padding-bottom: clamp(36px, 9vw, 56px); }
+}
+
+/* Menos aire entre "Elegí tu motor" e "Instalación" (ambas azules) */
+section#motor, section#engine { padding-bottom: clamp(24px, 4vw, 48px); }
+.sec-navy.install { padding-top: clamp(32px, 5vw, 64px); }
