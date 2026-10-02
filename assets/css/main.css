@@ -135,12 +135,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [role="tab"]:focus
 
 /* Instalación + parrilla */
 .install { padding-bottom: clamp(56px, 8vw, 100px); }
-.grille { position: relative; margin-top: clamp(28px, 4vw, 48px); aspect-ratio: 1600 / 893; overflow: hidden; }
+.grille { position: relative; margin-top: clamp(28px, 4vw, 48px); aspect-ratio: 1600 / 320; overflow: hidden; }
 .grille img { width: 100%; height: 100%; object-fit: cover; }
 .hs { position: absolute; display: block; text-decoration: none; -webkit-tap-highlight-color: transparent; }
 .hs::before { content: ""; position: absolute; inset: -14px; }
-.hs-win { left: 39.31%; top: 43.78%; width: 8.31%; height: 17.69%; }
-.hs-mac { left: 50.125%; top: 43.22%; width: 7.69%; height: 18.37%; }
+.hs-win { left: 39.313%; top: 20.625%; width: 8.313%; height: 49.375%; }
+.hs-mac { left: 50.125%; top: 18.750%; width: 7.938%; height: 52.188%; }
 .hs svg { width: 100%; height: 100%; overflow: visible; }
 .hs-shape { fill: #fff; opacity: 0; transition: opacity .18s ease; }
 .hs:hover .hs-shape, .hs:focus-visible .hs-shape { opacity: .95; }
@@ -247,3 +247,26 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; backgrou
   .hero-art img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 50% 58%; }
   .hero-art::before { inset: 0 auto 0 0; width: 42%; height: auto; background: linear-gradient(90deg, var(--navy) 0%, rgba(12, 43, 74, 0) 100%); }
 }
+
+/* Elegí tu motor v2: logos de marca, sin cortes, botón en una línea */
+.engine { padding: clamp(20px, 2vw, 26px); }
+.engine .brand { display: flex; flex-direction: column; justify-content: flex-end; gap: 8px; min-height: 66px; font-size: 1rem; }
+.logo-mark { display: block; max-width: 100%; background-color: var(--navy); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-position: left center; mask-position: left center; -webkit-mask-size: contain; mask-size: contain; }
+.logo-elevenlabs { width: 156px; height: 20px; -webkit-mask-image: url(../logo/partners/elevenlabs.svg); mask-image: url(../logo/partners/elevenlabs.svg); }
+.logo-speechmatics { width: 200px; height: 22px; -webkit-mask-image: url(../logo/partners/speechmatics.svg); mask-image: url(../logo/partners/speechmatics.svg); }
+.logo-assemblyai { width: 158px; height: 27px; -webkit-mask-image: url(../logo/partners/assemblyai.svg); mask-image: url(../logo/partners/assemblyai.svg); }
+.logo-deepgram { width: 132px; height: 29px; -webkit-mask-image: url(../logo/partners/deepgram-a.svg); mask-image: url(../logo/partners/deepgram-a.svg); }
+.engine .model { font-family: var(--font-body); font-weight: 600; font-size: .85rem; letter-spacing: .02em; opacity: .75; }
+.engine .btn { text-transform: none; letter-spacing: 0; font-size: .95rem; font-weight: 700; white-space: nowrap; min-height: 50px; padding: 12px 10px; }
+
+/* Parrilla recortada para celular */
+@media (max-width: 700px) {
+  .grille { aspect-ratio: 880 / 320; }
+  .hs-win { left: 29.432%; width: 15.114%; }
+  .hs-mac { left: 49.091%; width: 14.432%; }
+}
+
+/* Afinado: etiquetas de la parrilla a la misma altura y bloques de crédito alineados */
+.hs-win .hs-label { top: calc(100% + 20px); }
+@media (min-width: 760px) { .engine-does { min-height: 4.5em; } }
+@media (min-width: 1360px) { .engine-does { min-height: 6em; } }

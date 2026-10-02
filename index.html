@@ -55,10 +55,6 @@
           <span class="card-num" aria-hidden="true">01</span>
           <h3>Entiende lo que Premiere no se molesta en entender</h3>
           <p>Siglas, términos técnicos, voseo y nombres propios. Menos correcciones a mano.</p>
-          <figure class="quote">
-            <blockquote>“…es capaz de reconocer todas o casi todas las siglas y conceptos que se mencionan en el curso…”</blockquote>
-            <figcaption>@carlospino1192 · e-learning</figcaption>
-          </figure>
         </li>
         <li class="card">
           <span class="card-num" aria-hidden="true">02</span>
@@ -87,26 +83,26 @@
       <p class="sec-sub">Conectás tu propia API y cada proveedor te regala crédito para arrancar. Más que suficiente para subtitular una temporada entera. Sin tarjeta de crédito.</p>
       <ul class="engines">
         <li class="engine on-cream">
-          <h3>ElevenLabs <span>Scribe V2</span></h3>
+          <h3 class="brand"><span class="logo-mark logo-elevenlabs" role="img" aria-label="ElevenLabs"></span><span class="model">Scribe V2</span></h3>
           <p class="engine-does">El mejor oído para el español rioplatense: voseo, apodos y nombres propios.</p>
-          <p class="engine-credit"><span class="credit-kicker">Gratis todos los meses</span><strong>Unas 2 horas y media</strong><span class="credit-sub">de audio por mes</span></p>
+          <p class="engine-credit"><span class="credit-kicker">Gratis todos los meses</span><strong>2,5 horas</strong><span class="credit-sub">aprox., de audio por mes</span></p>
           <p class="engine-note">Para trabajos pagos, plan desde USD 6/mes.</p>
           <a class="btn btn-primary" href="https://elevenlabs.io/app/settings/api-keys" target="_blank" rel="noopener" data-provider="elevenlabs">Conseguir mi API key</a>
         </li>
         <li class="engine on-cream">
-          <h3>Speechmatics</h3>
+          <h3 class="brand"><span class="logo-mark logo-speechmatics" role="img" aria-label="Speechmatics"></span><span class="model">Enhanced</span></h3>
           <p class="engine-does">El mejor para entrevistas y varias voces: separa muy bien a los hablantes.</p>
           <p class="engine-credit"><span class="credit-kicker">Gratis</span><strong>USD 100</strong><span class="credit-sub">unas 250 horas de audio</span></p>
           <a class="btn btn-primary" href="https://portal.speechmatics.com/signup/" target="_blank" rel="noopener" data-provider="speechmatics">Conseguir mi API key</a>
         </li>
         <li class="engine on-cream">
-          <h3>AssemblyAI</h3>
+          <h3 class="brand"><span class="logo-mark logo-assemblyai" role="img" aria-label="AssemblyAI"></span><span class="model">Universal 3.5 Pro</span></h3>
           <p class="engine-does">El más prolijo: puntuación limpia, cifras listas y siglas reconocidas.</p>
           <p class="engine-credit"><span class="credit-kicker">Gratis</span><strong>USD 50</strong><span class="credit-sub">unas 200 horas de audio</span></p>
           <a class="btn btn-primary" href="https://www.assemblyai.com/dashboard/signup" target="_blank" rel="noopener" data-provider="assemblyai">Conseguir mi API key</a>
         </li>
         <li class="engine on-cream">
-          <h3>Deepgram</h3>
+          <h3 class="brand"><span class="logo-mark logo-deepgram" role="img" aria-label="Deepgram"></span><span class="model">Nova 3</span></h3>
           <p class="engine-does">El crédito gratis más grande para arrancar.</p>
           <p class="engine-credit"><span class="credit-kicker">Gratis</span><strong>USD 200</strong><span class="credit-sub">más de 600 horas de audio</span></p>
           <a class="btn btn-primary" href="https://console.deepgram.com/signup" target="_blank" rel="noopener" data-provider="deepgram">Conseguir mi API key</a>
@@ -124,13 +120,16 @@
       <p class="sec-sub">Sin cuenta en La Subtituleta. Instalás, pegás tu API key y listo.</p>
     </div>
     <div class="grille">
-      <img src="assets/img/grille-1600.webp" srcset="assets/img/grille-800.webp 800w, assets/img/grille-1600.webp 1600w" sizes="100vw" width="1600" height="893" alt="Parrilla de un colectivo con los logos de Windows y de Apple como emblemas de metal" loading="lazy" decoding="async">
+      <picture>
+        <source media="(max-width: 700px)" srcset="assets/img/grille-m-900.webp">
+        <img src="assets/img/grille-1600.webp" srcset="assets/img/grille-800.webp 800w, assets/img/grille-1600.webp 1600w" sizes="100vw" width="1600" height="320" alt="Parrilla de un colectivo con los logos de Windows y de Apple como emblemas de metal" loading="lazy" decoding="async">
+      </picture>
       <a class="hs hs-win" href="https://github.com/IKSNicoR/lasubtituleta-web/releases" data-os="windows" aria-label="Descargar para Windows">
         <svg viewBox="629 391 133 158" aria-hidden="true" focusable="false"><g class="hs-shape"><polygon points="630,408 681,404 681,465 631,463"/><polygon points="690,402 758,392 758,464 690,466"/><polygon points="632,476 681,476 681,534 633,532"/><polygon points="690,477 760,476 762,549 691,535"/></g></svg>
         <span class="hs-label">Windows</span>
       </a>
       <a class="hs hs-mac" href="https://github.com/IKSNicoR/lasubtituleta-web/releases" data-os="mac" aria-label="Descargar para Mac">
-        <svg viewBox="802 386 123 164" aria-hidden="true" focusable="false"><g class="hs-shape"><path transform="translate(796.5 386) scale(6.95)" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></g></svg>
+        <svg viewBox="802 385 127 167" aria-hidden="true" focusable="false"><g class="hs-shape"><path transform="translate(788.3 385) scale(6.47 6.96)" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></g></svg>
         <span class="hs-label">Mac</span>
       </a>
     </div>
