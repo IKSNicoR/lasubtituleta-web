@@ -94,3 +94,24 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [role="tab"]:focus
   .cta .btn { width: 100%; max-width: 340px; }
   .site-header .logo img { height: 36px; }
 }
+
+/* Secciones comunes */
+.sec { padding: clamp(64px, 9vw, 120px) 0; }
+.sec-cream { background: var(--cream); color: var(--navy); }
+.sec-navy { background: var(--navy); color: var(--cream); }
+.sec-red { background: var(--red); color: var(--cream); }
+.sec-title { font-size: clamp(1.6rem, 3.6vw, 2.9rem); line-height: 1.14; letter-spacing: -.01em; text-wrap: balance; max-width: 22ch; }
+.sec-title .h-reg { display: block; font-weight: 400; }
+.sec-title .h-bold { display: block; font-weight: 800; margin-top: .1em; }
+
+/* Qué hace */
+.cards { list-style: none; margin: clamp(32px, 5vw, 56px) 0 0; padding: 0; display: grid; gap: clamp(16px, 2vw, 24px); grid-template-columns: 1fr; }
+@media (min-width: 820px) { .cards { grid-template-columns: 1fr 1fr; } }
+.card { position: relative; border: 2px solid var(--navy); border-radius: var(--radius); padding: clamp(22px, 3vw, 36px); display: flex; flex-direction: column; gap: 12px; }
+.card-num { font-family: var(--font-title); font-weight: 800; font-size: 1rem; color: var(--red); letter-spacing: .04em; }
+.card h3 { font-size: clamp(1.25rem, 2vw, 1.65rem); font-weight: 800; line-height: 1.18; text-wrap: balance; }
+.card p { font-size: 1.0625rem; line-height: 1.55; max-width: 52ch; }
+.quote { margin: auto 0 0; padding-top: 14px; }
+.quote blockquote { margin: 0; padding-left: 14px; border-left: 3px solid var(--red); font-size: .98rem; line-height: 1.5; }
+.quote figcaption { margin-top: 8px; padding-left: 17px; font-size: .85rem; font-weight: 600; letter-spacing: .02em; opacity: .8; }
+.quote .tr { font-weight: 400; opacity: .85; }
