@@ -115,6 +115,70 @@
       <p class="foot">Based on our benchmark with a real 48-minute show with two voices. A guide, not a rule. ElevenLabs is the only one whose free credit renews every month.</p>
     </div>
   </section>
+  <section class="sec sec-navy install" id="install" aria-labelledby="t-install">
+    <div class="wrap">
+      <h2 class="sec-title" id="t-install">
+        <span class="h-reg">Install it</span>
+        <span class="h-bold">in 3 steps.</span>
+      </h2>
+      <p class="sec-sub">No account on La Subtituleta. Install it, paste your API key, done.</p>
+    </div>
+    <div class="grille">
+      <img src="../assets/img/grille-1600.webp" srcset="../assets/img/grille-800.webp 800w, ../assets/img/grille-1600.webp 1600w" sizes="100vw" width="1600" height="893" alt="The grille of a vintage bus with the Windows and Apple logos as metal emblems" loading="lazy" decoding="async">
+      <a class="hs hs-win" href="https://github.com/IKSNicoR/lasubtituleta-web/releases" data-os="windows" aria-label="Download for Windows">
+        <svg viewBox="629 391 133 158" aria-hidden="true" focusable="false"><g class="hs-shape"><polygon points="630,408 681,404 681,465 631,463"/><polygon points="690,402 758,392 758,464 690,466"/><polygon points="632,476 681,476 681,534 633,532"/><polygon points="690,477 760,476 762,549 691,535"/></g></svg>
+        <span class="hs-label">Windows</span>
+      </a>
+      <a class="hs hs-mac" href="https://github.com/IKSNicoR/lasubtituleta-web/releases" data-os="mac" aria-label="Download for Mac">
+        <svg viewBox="802 386 123 164" aria-hidden="true" focusable="false"><g class="hs-shape"><path transform="translate(796.5 386) scale(6.95)" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></g></svg>
+        <span class="hs-label">Mac</span>
+      </a>
+    </div>
+    <div class="wrap steps-wrap">
+      <div class="tabs" role="tablist" aria-label="Operating system">
+        <button type="button" role="tab" id="tab-win" aria-selected="true" aria-controls="panel-win">Windows</button>
+        <button type="button" role="tab" id="tab-mac" aria-selected="false" aria-controls="panel-mac" tabindex="-1">Mac</button>
+      </div>
+
+      <div role="tabpanel" id="panel-win" aria-labelledby="tab-win" class="panel">
+        <ol class="steps">
+          <li><h3>Download and unzip.</h3><p>Close Premiere, download the ZIP and extract it completely.</p></li>
+          <li><h3>Run the installer.</h3><p>Double-click <code>INSTALAR.cmd</code>.</p></li>
+          <li><h3>Open Premiere and paste your API key.</h3><p>Window &gt; Extensions (Legacy) &gt; La Subtituleta. Click the gear icon, paste an API key and save.</p></li>
+        </ol>
+        <a class="btn btn-primary" href="https://github.com/IKSNicoR/lasubtituleta-web/releases" data-os="windows">Download for Windows</a>
+      </div>
+
+      <div role="tabpanel" id="panel-mac" aria-labelledby="tab-mac" class="panel" hidden>
+        <p class="notice">You need Premiere Pro 2024 or later. The app isn't signed by Apple yet, so macOS will ask you for an extra confirmation. That's normal.</p>
+        <ol class="steps">
+          <li><h3>Download and unzip.</h3><p>Quit Premiere (Cmd+Q), download the ZIP and double-click it to extract.</p></li>
+          <li><h3>Run the installer.</h3><p>Double-click <code>INSTALAR.command</code>. If macOS blocks it: System Settings &gt; Privacy &amp; Security &gt; Open Anyway. No admin password and nothing else to install.</p></li>
+          <li><h3>Open Premiere and paste your API key.</h3><p>Window &gt; Extensions (Legacy) &gt; La Subtituleta. Click the gear icon, paste an API key and save.</p></li>
+        </ol>
+        <a class="btn btn-primary" href="https://github.com/IKSNicoR/lasubtituleta-web/releases" data-os="mac">Download for Mac</a>
+        <details class="trouble">
+          <summary>If something goes wrong</summary>
+          <dl>
+            <dt>macOS blocks the installer</dt>
+            <dd>Go to System Settings &gt; Privacy &amp; Security &gt; Open Anyway. On older macOS versions, right-clicking <code>INSTALAR.command</code> &gt; Open may be enough. Don't turn off your Mac's global security.</dd>
+            <dt>It says you don't have permission</dt>
+            <dd>Open Terminal, type <code>/bin/bash</code> followed by a space, drag <code>INSTALAR.command</code> from Finder into that window and press Enter. Don't type the path by hand or use sudo.</dd>
+            <dt>It doesn't show up in the menu</dt>
+            <dd>Fully close and reopen Premiere. If it still doesn't show up, restart your Mac.</dd>
+          </dl>
+        </details>
+        <p class="trust">It doesn't ask for an admin password or require Python or Node.</p>
+        <p class="trust">Tried it on your Mac? Tell us your Premiere and macOS versions, and whether it's Apple Silicon or Intel: <a href="mailto:nico@nicorusso.com">nico@nicorusso.com</a>.</p>
+      </div>
+
+      <ul class="after">
+        <li><a href="https://youtu.be/le7FsAnQtTA?t=1160" target="_blank" rel="noopener">Watch the install in the video</a> <span>(in Spanish; it shows an earlier version of the installer: today a double-click on <code>INSTALAR</code> and a single API key are enough).</span></li>
+        <li>To update, just run the installer again: your API keys are kept. To uninstall, run <code>DESINSTALAR</code>.</li>
+      </ul>
+    </div>
+  </section>
 </main>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>

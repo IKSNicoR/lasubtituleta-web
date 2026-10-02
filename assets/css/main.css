@@ -132,3 +132,53 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [role="tab"]:focus
 .engine-note { font-size: .875rem; line-height: 1.45; opacity: .85; margin-top: -4px; }
 .engine .btn { width: 100%; padding-inline: 14px; margin-top: auto; }
 .foot { margin-top: clamp(24px, 3vw, 36px); font-size: .875rem; line-height: 1.55; max-width: 70ch; opacity: .75; }
+
+/* Instalación + parrilla */
+.install { padding-bottom: clamp(56px, 8vw, 100px); }
+.grille { position: relative; margin-top: clamp(28px, 4vw, 48px); aspect-ratio: 1600 / 893; overflow: hidden; }
+.grille img { width: 100%; height: 100%; object-fit: cover; }
+.hs { position: absolute; display: block; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.hs::before { content: ""; position: absolute; inset: -14px; }
+.hs-win { left: 39.31%; top: 43.78%; width: 8.31%; height: 17.69%; }
+.hs-mac { left: 50.125%; top: 43.22%; width: 7.69%; height: 18.37%; }
+.hs svg { width: 100%; height: 100%; overflow: visible; }
+.hs-shape { fill: #fff; opacity: 0; transition: opacity .18s ease; }
+.hs:hover .hs-shape, .hs:focus-visible .hs-shape { opacity: .95; }
+.hs-label {
+  position: absolute; left: 50%; top: calc(100% + 16px); transform: translate(-50%, -4px);
+  background: var(--cream); color: var(--navy); font: 700 .8rem/1 var(--font-body); letter-spacing: .05em; text-transform: uppercase;
+  padding: 8px 14px; border-radius: 999px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease;
+}
+.hs:hover .hs-label, .hs:focus-visible .hs-label { opacity: 1; transform: translate(-50%, 0); }
+.hs:focus-visible { outline: 3px solid var(--cream); outline-offset: 6px; }
+@media (hover: none) {
+  .hs-shape { opacity: .5; }
+  .hs-label { opacity: 1; transform: translate(-50%, 0); }
+}
+@media (max-width: 700px) {
+  .hs-win .hs-label { left: auto; right: 40%; transform: none; }
+  .hs-mac .hs-label { left: 40%; transform: none; }
+  .hs:hover .hs-label, .hs:focus-visible .hs-label { transform: none; }
+  .hs-label { top: calc(100% + 10px); padding: 7px 11px; font-size: .72rem; }
+}
+
+.steps-wrap { padding-top: clamp(32px, 5vw, 56px); }
+.tabs { display: inline-flex; gap: 6px; padding: 5px; border: 1px solid rgba(248, 235, 201, .45); border-radius: var(--radius); }
+.tabs button { background: transparent; color: var(--cream); border: 0; padding: 11px 24px; border-radius: 10px; font: 700 .95rem var(--font-body); letter-spacing: .02em; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--cream); color: var(--navy); }
+.panel[hidden] { display: none; }
+.notice { margin-top: 26px; max-width: 760px; padding: 14px 18px; border: 1px solid rgba(248, 235, 201, .5); border-radius: var(--radius); font-size: .98rem; }
+.steps { list-style: none; counter-reset: step; margin: 28px 0; padding: 0; display: grid; gap: 22px; max-width: 760px; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 2.4rem 1fr; column-gap: 14px; }
+.steps li::before { content: counter(step); grid-row: 1 / 3; font-family: var(--font-title); font-weight: 800; font-size: 2rem; line-height: 1; color: var(--cream); opacity: .5; }
+.steps h3 { font-size: 1.2rem; font-weight: 800; line-height: 1.2; }
+.steps p { margin-top: 4px; opacity: .92; }
+code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; background: rgba(248, 235, 201, .14); padding: 2px 7px; border-radius: 6px; font-size: .9em; word-break: break-word; }
+.trouble { margin-top: 28px; max-width: 760px; border-top: 1px solid rgba(248, 235, 201, .3); padding-top: 16px; }
+.trouble summary { cursor: pointer; font-weight: 700; }
+.trouble dt { font-weight: 700; margin-top: 16px; }
+.trouble dd { margin: 4px 0 0; opacity: .92; }
+.trust { margin-top: 14px; max-width: 760px; font-size: .95rem; opacity: .88; }
+.after { list-style: none; padding: 0; margin: 40px 0 0; display: grid; gap: 12px; max-width: 760px; font-size: .95rem; opacity: .92; }
+.after a, .trust a { font-weight: 700; text-underline-offset: 3px; }
+.panel .btn { margin-top: 4px; }
