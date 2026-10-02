@@ -270,3 +270,18 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; backgrou
 .hs-win .hs-label { top: calc(100% + 20px); }
 @media (min-width: 760px) { .engine-does { min-height: 4.5em; } }
 @media (min-width: 1360px) { .engine-does { min-height: 6em; } }
+
+/* Celular y tablet: el cartel "La Subtituleta SRT" tiene que verse (hero) y el frente del colectivo centrado (cierre) */
+@media (max-width: 959px) {
+  /* Hero apilado: fundido corto, para no apagar el cartel del techo */
+  .hero-art::before { height: 14%; background: linear-gradient(var(--navy) 0%, rgba(12, 43, 74, 0) 100%); }
+  .hero-art img { object-position: 50% 55%; }
+}
+@media (max-width: 959px) {
+  /* Cierre: texto y botones abajo, sobre un degradé desde abajo; el colectivo arriba, con el cartel a la vista */
+  .closing { min-height: 620px; align-items: flex-end; }
+  .closing-bg { object-position: 92% 30%; }
+  .closing::after { background: linear-gradient(0deg, rgba(12, 43, 74, .97) 0%, rgba(12, 43, 74, .9) 36%, rgba(12, 43, 74, .35) 58%, rgba(12, 43, 74, 0) 72%); }
+  .closing-inner { padding-top: 0; padding-bottom: clamp(36px, 8vw, 56px); }
+  .closing .sec-title { font-size: clamp(1.7rem, 7vw, 2.6rem); }
+}
