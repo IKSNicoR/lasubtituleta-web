@@ -332,3 +332,15 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; backgrou
 .pin { left: -15px; top: calc(50% - 13px); }
 @media (min-width: 960px) { .product { align-items: start; } .panel-fig { position: sticky; top: 24px; } }
 .pin { left: -27px; }
+
+/* Cierre v3 (2026-10-02): texto y degradé abajo en todos los tamaños, botones centrados y el cartel del colectivo siempre a la vista */
+.closing { align-items: flex-end; }
+.closing-bg { object-position: center top; }
+.closing::after { background: linear-gradient(0deg, rgba(12, 43, 74, .97) 0%, rgba(12, 43, 74, .9) 30%, rgba(12, 43, 74, .35) 52%, rgba(12, 43, 74, 0) 66%); }
+.closing-inner { padding-top: 0; padding-bottom: clamp(40px, 6vw, 72px); }
+.closing .cta { justify-content: center; }
+@media (max-width: 959px) { .closing-bg { object-position: 92% 30%; } }
+
+/* Títulos en un solo renglón (primera parte regular, remate en bold) */
+.sec-title.one-line { max-width: none; }
+.sec-title.one-line .h-reg, .sec-title.one-line .h-bold { display: inline; margin-top: 0; }
