@@ -216,6 +216,29 @@
       <p class="t-note">All quotes translated from Spanish.</p>
     </div>
   </section>
+  <section class="sec sec-cream on-cream" id="faq" aria-labelledby="t-faq">
+    <div class="wrap">
+      <h2 class="sec-title" id="t-faq">
+        <span class="h-reg">What people</span>
+        <span class="h-bold">ask us most.</span>
+      </h2>
+      <div class="faq">
+        <details class="qa"><summary>Is it free?</summary><div class="qa-body"><p>Yes, La Subtituleta is free forever. What can cost money is the AI provider you pick, but they all give you free credit to start: roughly 200 to over 600 hours of audio with AssemblyAI, Speechmatics and Deepgram, and about 2.5 hours per month with ElevenLabs.</p></div></details>
+        <details class="qa"><summary>What is an API key?</summary><div class="qa-body"><p>It's a password the AI provider gives you so La Subtituleta can send your audio to them and get the text back. You get it yourself, for free, by creating an account with the provider (usually your email or Google login is enough). It's a long code you copy and paste once into the extension's gear menu, and it stays on your computer. It's personal: don't share it with anyone, not even me.</p></div></details>
+        <details class="qa"><summary>Do I need a credit card?</summary><div class="qa-body"><p>Not to get started. No provider asks for one to get the API key and use the free credit. Later, if you run out of credit, they may ask for one (see below).</p></div></details>
+        <details class="qa"><summary>What happens when the credit runs out?</summary><div class="qa-body"><p>The credit from AssemblyAI, Speechmatics and Deepgram is a one-time starting credit per account and doesn't renew (ElevenLabs does, every month). When it's gone: AssemblyAI asks you to add funds or turn on billing, Speechmatics asks you to add a card and moves to pay-as-you-go, and Deepgram moves to pay-as-you-go. It costs roughly USD 0.20 to 0.40 per hour of audio. You never pay La Subtituleta anything.</p></div></details>
+        <details class="qa"><summary>I subtitle a lot of content. Will the free credit be enough?</summary><div class="qa-body"><p>Test it and measure it: transcribe a couple of videos, check how much credit you used in your provider's dashboard, and work out the cost per hour. If you use it every month, compare it to the hours you now spend fixing captions by hand. You can also spread the work across several providers.</p></div></details>
+        <details class="qa"><summary>Does it work on Mac?</summary><div class="qa-body"><p>Yes. You need Premiere Pro 2024 or later. The app isn't signed by Apple yet, so macOS will ask you for an extra confirmation (it's explained above, in the install section). If you try it, tell us your Premiere and macOS versions, and whether your Mac is Apple Silicon or Intel.</p></div></details>
+        <details class="qa"><summary>What if my video isn't in Spanish?</summary><div class="qa-body"><p>It works. La Subtituleta detects the video's language on its own and, if you want, translates the captions into many other languages (English, Portuguese, French, German, Italian, Japanese, Chinese, Korean and more).</p></div></details>
+        <details class="qa"><summary>Does it recognize who's speaking?</summary><div class="qa-body"><p>The API detects when the speaker changes, but it can't know what each person is called. You enter the names in the order they appear (Speaker 1, Speaker 2…) and that information is stored in the JSON.</p></div></details>
+        <details class="qa"><summary>What about DaVinci Resolve?</summary><div class="qa-body"><p>For now La Subtituleta is available for Premiere Pro, on Windows and Mac. Nico Russo wants to keep it that way: Premiere is the program he uses every day, and that's how he builds and improves it. The key is that tools should be made by the people who use them. If you use DaVinci and want to collaborate with Nico (testing, helping launch it and keep testing it from time to time), write to <a href="mailto:nico@nicorusso.com">nico@nicorusso.com</a>.</p></div></details>
+        <details class="qa"><summary>What if the API fails?</summary><div class="qa-body"><p>The most common error is “API 401: Invalid credentials”: it means the key isn't valid or belongs to a different provider. Delete it in Settings, save, paste a valid key again and check that the selected model belongs to the same service. Try again with a short video. If it keeps failing, write to us with the service and model you're using, and don't send your API key.</p></div></details>
+        <details class="qa"><summary>Does my audio get uploaded somewhere?</summary><div class="qa-body"><p>La Subtituleta has no servers of its own: it doesn't receive or store your audio. To transcribe, the audio goes straight from your computer to the AI provider you chose, and each provider has its own terms of use and confidentiality. If you work with confidential material or under an agreement with your client, read the provider's policies before uploading and use your own judgment.</p></div></details>
+        <details class="qa"><summary>Why use this if Premiere already transcribes?</summary><div class="qa-body"><p>So you don't spend hours fixing captions. It understands acronyms, regional slang and proper names, cuts lines the way an editor would, separates speakers and gives you a JSON to work with your AI. And you choose the engine.</p></div></details>
+        <details class="qa"><summary>How do I get help?</summary><div class="qa-body"><p>Write to <a href="mailto:nico@nicorusso.com">nico@nicorusso.com</a> with a screenshot and the exact error text, your Premiere version and your operating system. Don't send your API key.</p></div></details>
+      </div>
+    </div>
+  </section>
 </main>
 <script src="../assets/js/main.js" defer></script>
 </body>

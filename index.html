@@ -215,6 +215,29 @@
       </ul>
     </div>
   </section>
+  <section class="sec sec-cream on-cream" id="preguntas" aria-labelledby="t-faq">
+    <div class="wrap">
+      <h2 class="sec-title" id="t-faq">
+        <span class="h-reg">Lo que más</span>
+        <span class="h-bold">nos preguntaron.</span>
+      </h2>
+      <div class="faq">
+        <details class="qa"><summary>¿Qué es una API key?</summary><div class="qa-body"><p>Es una contraseña que te da el proveedor de IA para que La Subtituleta le pueda mandar tu audio y recibir el texto. La sacás vos, gratis, creando una cuenta en el proveedor (en general alcanza con tu mail o con Google). Es un código largo que copiás y pegás una sola vez en el engranaje de la extensión, y queda guardado en tu computadora. Es personal: no se la des a nadie, ni a mí.</p></div></details>
+        <details class="qa"><summary>¿Es gratis?</summary><div class="qa-body"><p>Sí, La Subtituleta es gratis para siempre. Lo que puede cobrar es el proveedor de IA que elijas, pero todos te regalan crédito para empezar: entre unas 200 y más de 600 horas de audio en AssemblyAI, Speechmatics y Deepgram, y unas 2 horas y media por mes en ElevenLabs.</p></div></details>
+        <details class="qa"><summary>¿Necesito tarjeta de crédito?</summary><div class="qa-body"><p>No para empezar. Ningún proveedor la pide para sacar la API key y usar el crédito gratis. Más adelante, si se te acaba el crédito, sí puede pedirla (ver abajo).</p></div></details>
+        <details class="qa"><summary>¿Qué pasa cuando se acaba el crédito?</summary><div class="qa-body"><p>El crédito de AssemblyAI, Speechmatics y Deepgram es inicial, uno por cuenta, y no se renueva (el de ElevenLabs sí, cada mes). Cuando se agota: AssemblyAI te pide cargar saldo o activar el pago, Speechmatics te pide agregar una tarjeta y pasa a pago por uso, y Deepgram pasa a pago por uso. Cuesta entre USD 0,20 y 0,40 por hora de audio. A La Subtituleta nunca le pagás nada.</p></div></details>
+        <details class="qa"><summary>Subtitulo mucho contenido, ¿me alcanza el crédito gratis?</summary><div class="qa-body"><p>Probalo y medilo: transcribí un par de videos, mirá cuánto crédito gastaste en el panel de tu proveedor y calculá cuánto te sale por hora. Si lo usás todos los meses, comparalo con las horas que hoy te lleva corregir a mano. Y podés repartir el trabajo entre varios proveedores.</p></div></details>
+        <details class="qa"><summary>¿Funciona en Mac?</summary><div class="qa-body"><p>Sí. Necesitás Premiere Pro 2024 o posterior. Todavía no tiene la firma de Apple, así que macOS te va a pedir una confirmación extra (está explicado arriba, en la instalación). Si la probás, contanos tu versión de Premiere y de macOS, y si tu Mac es Apple Silicon o Intel.</p></div></details>
+        <details class="qa"><summary>¿Sirve si mi video no está en español?</summary><div class="qa-body"><p>Sí. La Subtituleta detecta sola el idioma del video y, si querés, traduce los captions a muchos otros idiomas (inglés, portugués, francés, alemán, italiano, japonés, chino, coreano y más).</p></div></details>
+        <details class="qa"><summary>¿Reconoce quién habla?</summary><div class="qa-body"><p>La API detecta cuándo cambia el hablante, pero no puede saber cómo se llama cada uno. Vos cargás los nombres en el orden en que van apareciendo (Speaker 1, Speaker 2…) y esa información queda en el JSON.</p></div></details>
+        <details class="qa"><summary>¿Y en DaVinci Resolve?</summary><div class="qa-body"><p>Por ahora La Subtituleta está disponible para Premiere Pro, en Windows y en Mac. Nico Russo quiere mantenerla así: Premiere es el programa que usa todos los días, y esa es la forma en que la construye y la mejora. La clave es que los programas los hagan quienes los usan. Si usás DaVinci y querés colaborar con Nico (hacer pruebas, ayudar a lanzarla y seguir probándola cada tanto), escribile a <a href="mailto:nico@nicorusso.com">nico@nicorusso.com</a>.</p></div></details>
+        <details class="qa"><summary>¿Qué pasa si me falla la API?</summary><div class="qa-body"><p>El error más común es “API 401: Invalid credentials”: significa que la key no es válida o está cargada en otro proveedor. Borrala desde Configuración, guardá, volvé a pegar una key vigente y revisá que el modelo elegido sea del mismo servicio. Probá de nuevo con un video cortito. Si sigue, escribinos qué servicio y modelo usás, y no nos mandes tu API key.</p></div></details>
+        <details class="qa"><summary>¿Mi audio se sube a algún lado?</summary><div class="qa-body"><p>La Subtituleta no tiene servidores propios: no recibe ni guarda tu audio. Para transcribir, el audio viaja directo de tu computadora al proveedor de IA que elegiste, y cada proveedor tiene sus propios términos de uso y de confidencialidad. Si trabajás con material confidencial o sujeto a un acuerdo con tu cliente, leé las políticas del proveedor antes de subirlo y usá tu criterio.</p></div></details>
+        <details class="qa"><summary>¿Para qué sirve si Premiere ya transcribe?</summary><div class="qa-body"><p>Para no pasar horas corrigiendo. Entiende siglas, voseo y nombres propios, corta las líneas como editor, separa a los hablantes y te deja un JSON para trabajar con tu IA. Y vos elegís el motor.</p></div></details>
+        <details class="qa"><summary>¿Cómo pido ayuda?</summary><div class="qa-body"><p>Escribí a <a href="mailto:nico@nicorusso.com">nico@nicorusso.com</a> con una captura y el texto exacto del error, tu versión de Premiere y de tu sistema. No mandes tu API key.</p></div></details>
+      </div>
+    </div>
+  </section>
 </main>
 <script src="assets/js/main.js" defer></script>
 </body>
