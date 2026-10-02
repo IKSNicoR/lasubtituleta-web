@@ -30,6 +30,17 @@
     if (/mac/i.test(platform) && !isIOS) select(document.getElementById('tab-mac'), false);
   }
 
+  // Panel de la extensión: al pasar por una tarjeta se ilumina su zona
+  var fig = document.querySelector('.panel-fig');
+  if (fig) {
+    Array.prototype.forEach.call(document.querySelectorAll('.product .card[data-zone]'), function (card) {
+      var on = function () { fig.setAttribute('data-active', card.getAttribute('data-zone')); };
+      var off = function () { fig.setAttribute('data-active', '0'); };
+      card.addEventListener('mouseenter', on); card.addEventListener('mouseleave', off);
+      card.addEventListener('focusin', on); card.addEventListener('focusout', off);
+    });
+  }
+
   // Eventos de GA4 (si gtag no existe, no hace nada)
   var track = function (name, params) {
     try { if (typeof gtag === 'function') gtag('event', name, params); } catch (e) {}
@@ -46,6 +57,7 @@
     if (!a) return;
     if (a.dataset.os) track('download_click', { os: a.dataset.os, placement: placementOf(a) });
     else if (a.dataset.provider) track('api_key_click', { provider: a.dataset.provider });
+    else if (a.dataset.video) track('video_click', { video: a.dataset.video, placement: a.closest('.tuts') ? 'tutoriales' : (a.closest('.cards') ? 'que-hace' : 'otro') });
     else if (a.closest('.lang')) track('language_switch', { to: a.getAttribute('lang') });
     else if (/youtu\.be|youtube\.com/.test(a.href) && a.closest('.after')) track('install_video_click', {});
   });

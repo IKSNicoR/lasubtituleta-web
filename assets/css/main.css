@@ -285,3 +285,50 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; backgrou
   .closing-inner { padding-top: 0; padding-bottom: clamp(36px, 8vw, 56px); }
   .closing .sec-title { font-size: clamp(1.7rem, 7vw, 2.6rem); }
 }
+
+/* Producto: panel de la extensión con pines + cards */
+.product { display: grid; gap: clamp(24px, 4vw, 48px); margin-top: clamp(28px, 4vw, 52px); align-items: start; }
+.product .cards { margin-top: 0; grid-template-columns: 1fr; }
+@media (min-width: 960px) { .product { grid-template-columns: minmax(0, 500px) minmax(0, 1fr); align-items: center; } }
+.panel-fig { margin: 0; max-width: 560px; }
+.panel-stage { position: relative; border: 2px solid var(--navy); }
+.panel-stage img { display: block; width: 100%; height: auto; }
+.panel-fig figcaption { margin-top: 10px; font-size: .85rem; opacity: .8; }
+.zone { position: absolute; border: 2px solid transparent; border-radius: 4px; transition: border-color .18s ease, background-color .18s ease; pointer-events: none; }
+.pin { position: absolute; left: 8px; top: -13px; width: 26px; height: 26px; border-radius: 50%; background: var(--red); color: var(--cream); border: 2px solid var(--cream); font: 700 .78rem/1 var(--font-body); display: grid; place-items: center; }
+.z1 { left: 1.585%; top: 4.987%; width: 97.2%; height: 7.48%; }
+.z2a { left: 1.7%; top: 61.15%; width: 97.1%; height: 11.02%; }
+.z2b { left: 50.86%; top: 84.38%; width: 47.95%; height: 4.86%; }
+.z3 { left: 1.7%; top: 14.04%; width: 97.1%; height: 24.41%; }
+.z4 { left: 1.72%; top: 84.38%; width: 47.95%; height: 4.86%; }
+.panel-fig[data-active="1"] .z1, .panel-fig[data-active="2"] .z2a, .panel-fig[data-active="2"] .z2b, .panel-fig[data-active="3"] .z3, .panel-fig[data-active="4"] .z4 { border-color: var(--cream); background-color: rgba(248, 235, 201, .16); }
+.textlink { font-weight: 700; color: var(--red); text-underline-offset: 3px; }
+
+/* Aprendé a usarla */
+.tuts { list-style: none; padding: 0; margin: clamp(28px, 4vw, 48px) 0 0; display: grid; gap: clamp(18px, 2.4vw, 28px); grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.tut a { display: flex; flex-direction: column; gap: 10px; height: 100%; text-decoration: none; color: var(--navy); }
+.thumb { position: relative; display: block; overflow: hidden; border: 2px solid var(--navy); }
+.thumb img { display: block; width: 100%; height: auto; transition: transform .3s ease; }
+.tut a:hover .thumb img { transform: scale(1.03); }
+.dur { position: absolute; right: 8px; bottom: 8px; background: var(--navy); color: var(--cream); font: 700 .78rem/1 var(--font-body); padding: 5px 7px; border-radius: 4px; }
+.tut h3 { font-size: clamp(1.15rem, 1.7vw, 1.4rem); font-weight: 800; line-height: 1.2; text-wrap: balance; }
+.tut p { font-size: 1rem; line-height: 1.5; }
+.watch { margin-top: auto; font-weight: 700; color: var(--red); }
+.tut a:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+.more { margin-top: clamp(20px, 3vw, 32px); }
+.more a { font-weight: 700; text-underline-offset: 3px; }
+
+/* Instalación: captura de Configuración junto a los pasos */
+.setfig { margin: 28px 0 0; max-width: 520px; }
+.setfig img { display: block; width: 100%; height: auto; border: 1px solid rgba(248, 235, 201, .4); }
+.setfig figcaption { margin-top: 10px; font-size: .88rem; opacity: .85; }
+@media (min-width: 1000px) {
+  .steps-wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); column-gap: 56px; align-items: start; }
+  .steps-wrap > * { grid-column: 1; }
+  .steps-wrap > .setfig { grid-column: 2; grid-row: 1 / span 4; margin-top: 8px; }
+}
+
+/* Afinado del panel: pines en el borde izquierdo (no tapan los títulos) y panel fijo mientras se leen las tarjetas */
+.pin { left: -15px; top: calc(50% - 13px); }
+@media (min-width: 960px) { .product { align-items: start; } .panel-fig { position: sticky; top: 24px; } }
+.pin { left: -27px; }

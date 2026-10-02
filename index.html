@@ -62,28 +62,41 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         <span class="h-reg">Hecha por un editor</span>
         <span class="h-bold">cansado de corregir subtítulos.</span>
       </h2>
-      <ul class="cards">
-        <li class="card">
-          <span class="card-num" aria-hidden="true">01</span>
-          <h3>Entiende lo que Premiere no se molesta en entender</h3>
-          <p>Siglas, términos técnicos, voseo y nombres propios. Menos correcciones a mano.</p>
-        </li>
-        <li class="card">
-          <span class="card-num" aria-hidden="true">02</span>
-          <h3>Captions nativos, cortados como editor</h3>
-          <p>Los editás como siempre. Con Reflow Lines reordenás las líneas para otro formato en segundos.</p>
-        </li>
-        <li class="card">
-          <span class="card-num" aria-hidden="true">03</span>
-          <h3>Sabe quién habla</h3>
-          <p>Identifica a cada hablante, ideal para entrevistas, programas y varias voces.</p>
-        </li>
-        <li class="card">
-          <span class="card-num" aria-hidden="true">04</span>
-          <h3>Data para tu IA</h3>
-          <p>Genera data con la que Claude o ChatGPT pueden trabajar. El JSON trae metadata para que tu IA arme clips, con menos tokens que subir el video.</p>
-        </li>
-      </ul>
+      <div class="product">
+        <figure class="panel-fig" data-active="0">
+          <div class="panel-stage">
+            <img src="assets/img/panel.webp" width="757" height="762" alt="El panel de La Subtituleta dentro de Premiere Pro: selector de modelo, reconocimiento de speakers, formato de líneas y los botones Transcribir y Reflow Lines" loading="lazy" decoding="async">
+            <span class="zone z1" aria-hidden="true"><b class="pin">1</b></span>
+            <span class="zone z2a" aria-hidden="true"><b class="pin">2</b></span>
+            <span class="zone z2b" aria-hidden="true"></span>
+            <span class="zone z3" aria-hidden="true"><b class="pin">3</b></span>
+            <span class="zone z4" aria-hidden="true"><b class="pin">4</b></span>
+          </div>
+          <figcaption>Así se ve La Subtituleta dentro de Premiere Pro.</figcaption>
+        </figure>
+        <ul class="cards">
+          <li class="card" data-zone="1">
+            <span class="card-num" aria-hidden="true">01</span>
+            <h3>Entiende lo que Premiere no se molesta en entender</h3>
+            <p>Siglas, términos técnicos, voseo y nombres propios. Menos correcciones a mano.</p>
+          </li>
+          <li class="card" data-zone="2">
+            <span class="card-num" aria-hidden="true">02</span>
+            <h3>Captions nativos, cortados como editor</h3>
+            <p>Los editás como siempre. Con Reflow Lines reordenás las líneas para otro formato en segundos.</p>
+          </li>
+          <li class="card" data-zone="3">
+            <span class="card-num" aria-hidden="true">03</span>
+            <h3>Sabe quién habla</h3>
+            <p>Identifica a cada hablante, ideal para entrevistas, programas y varias voces.</p>
+          </li>
+          <li class="card" data-zone="4">
+            <span class="card-num" aria-hidden="true">04</span>
+            <h3>Data para tu IA</h3>
+            <p>Genera data con la que Claude o ChatGPT pueden trabajar, por ejemplo, podés crear <a class="textlink" href="https://www.youtube.com/watch?v=gZtgowINg_E" target="_blank" rel="noopener" data-video="motion">motion graphics</a> con la data que te genera La Subtituleta.</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
   <section class="sec sec-navy" id="motor" aria-labelledby="t-motor">
@@ -183,10 +196,39 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         <p class="trust">¿Lo probaste en tu Mac? Contanos tu versión de Premiere, de macOS y si es Apple Silicon o Intel: <a href="mailto:nico@nicorusso.com">nico@nicorusso.com</a>.</p>
       </div>
 
+      <figure class="setfig"><img src="assets/img/ajustes.webp" width="772" height="453" alt="Pantalla de Configuración de La Subtituleta con los campos para pegar las API keys de AssemblyAI, Speechmatics, Deepgram y ElevenLabs" loading="lazy" decoding="async"><figcaption>Pegá tu API key en la pantalla de Configuración (el engranaje). Alcanza con una.</figcaption></figure>
       <ul class="after">
         <li><a href="https://youtu.be/le7FsAnQtTA?t=1160" target="_blank" rel="noopener">Mirá la instalación en el video</a> <span>(muestra una versión anterior del instalador: hoy alcanza con doble clic en <code>INSTALAR</code> y una sola API key).</span></li>
         <li>Para actualizar, volvé a ejecutar el instalador: tus API keys se conservan. Para desinstalar, ejecutá <code>DESINSTALAR</code>.</li>
       </ul>
+    </div>
+  </section>
+  <section class="sec sec-cream on-cream" id="tutoriales" aria-labelledby="t-tut">
+    <div class="wrap">
+      <h2 class="sec-title" id="t-tut">
+        <span class="h-reg">Aprendé</span>
+        <span class="h-bold">a usarla.</span>
+      </h2>
+      <p class="sec-sub">Tutoriales en video, paso a paso, en español.</p>
+      <ul class="tuts">
+        <li class="tut">
+          <a href="https://www.youtube.com/watch?v=le7FsAnQtTA" target="_blank" rel="noopener" data-video="general">
+            <span class="thumb"><img src="assets/img/tut-general.webp" width="800" height="450" alt="Miniatura del video: Nico Russo al volante del colectivo de La Subtituleta" loading="lazy" decoding="async"><span class="dur">22:55</span></span>
+            <h3>Cómo funciona La Subtituleta</h3>
+            <p>Instalación, API keys y uso general, paso a paso.</p>
+            <span class="watch">Ver en YouTube ↗</span>
+          </a>
+        </li>
+        <li class="tut">
+          <a href="https://www.youtube.com/watch?v=gZtgowINg_E" target="_blank" rel="noopener" data-video="motion">
+            <span class="thumb"><img src="assets/img/tut-motion.webp" width="800" height="450" alt="Miniatura del video: Nico Russo pintando el cartel del colectivo, con el título Motion Graphics" loading="lazy" decoding="async"><span class="dur">8:08</span></span>
+            <h3>Motion graphics con IA en 15 minutos</h3>
+            <p>Cómo usar la data de La Subtituleta con Claude y Premiere para hacer motion graphics.</p>
+            <span class="watch">Ver en YouTube ↗</span>
+          </a>
+        </li>
+      </ul>
+      <p class="more"><a href="https://www.youtube.com/playlist?list=PLYZWgDlQZy24" target="_blank" rel="noopener" data-video="playlist">Ver toda la lista de reproducción ↗</a></p>
     </div>
   </section>
   <section class="sec sec-red" id="testimonios" aria-labelledby="t-testi">
