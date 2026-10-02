@@ -232,3 +232,18 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; backgrou
 .foot-links { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px 28px; font-weight: 600; }
 .fine { list-style: none; padding: 0; margin: clamp(28px, 4vw, 44px) 0 0; display: grid; gap: 6px; font-size: .8rem; line-height: 1.5; opacity: .72; max-width: 80ch; }
 @media (max-width: 640px) { .closing .cta .btn { width: 100%; max-width: 340px; } }
+
+/* Hero dividido (escritorio): texto a la izquierda, bondi a la derecha */
+@media (min-width: 960px) {
+  .hero { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); align-items: stretch; padding-top: 0; min-height: min(100svh, 880px); }
+  .hero-inner {
+    max-width: none; margin: 0; width: 100%; align-self: center; text-align: left;
+    padding: clamp(130px, 18vh, 190px) clamp(24px, 3.5vw, 56px) clamp(56px, 8vh, 96px) var(--gutter);
+  }
+  .hero h1 { font-size: clamp(2rem, 3.6vw, 3.4rem); }
+  .hero-sub { margin-left: 0; margin-right: 0; max-width: 44ch; }
+  .cta { justify-content: flex-start; }
+  .hero-art { margin: 0; position: relative; min-height: 100%; }
+  .hero-art img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 50% 58%; }
+  .hero-art::before { inset: 0 auto 0 0; width: 42%; height: auto; background: linear-gradient(90deg, var(--navy) 0%, rgba(12, 43, 74, 0) 100%); }
+}
