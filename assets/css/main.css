@@ -182,3 +182,22 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; backgrou
 .after { list-style: none; padding: 0; margin: 40px 0 0; display: grid; gap: 12px; max-width: 760px; font-size: .95rem; opacity: .92; }
 .after a, .trust a { font-weight: 700; text-underline-offset: 3px; }
 .panel .btn { margin-top: 4px; }
+
+/* Testimonios */
+.feature { background: var(--cream); color: var(--navy); border-radius: var(--radius); padding: clamp(26px, 4vw, 56px); margin-top: clamp(28px, 4vw, 48px); }
+.feature-stat { font-family: var(--font-title); font-weight: 800; font-size: clamp(1.8rem, 4.2vw, 3.4rem); line-height: 1.08; color: var(--red); text-wrap: balance; }
+.feature-ctx { margin-top: 10px; font-weight: 600; opacity: .85; }
+.feature blockquote { margin: 22px 0 0; max-width: 62ch; padding-left: 18px; border-left: 3px solid var(--red); font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.5; }
+.who { margin-top: 14px; padding-left: 21px; font-size: .95rem; }
+.tcards { display: grid; gap: clamp(14px, 2vw, 22px); margin-top: clamp(14px, 2vw, 22px); grid-template-columns: 1fr; }
+@media (min-width: 960px) { .tcards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tcard { margin: 0; background: var(--cream); color: var(--navy); border-radius: var(--radius); padding: clamp(22px, 2.4vw, 30px); display: flex; flex-direction: column; gap: 16px; }
+.tcard blockquote { margin: 0; font-size: 1.02rem; line-height: 1.55; }
+.tcard figcaption { margin-top: auto; font-size: .9rem; font-weight: 700; line-height: 1.4; }
+.tcard figcaption span { display: block; font-weight: 400; opacity: .85; }
+.strip { list-style: none; padding: 0; margin: clamp(32px, 4vw, 52px) 0 0; display: grid; grid-template-columns: 1fr; border-top: 1px solid rgba(248, 235, 201, .45); }
+@media (min-width: 760px) { .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; } }
+.strip li { padding: 18px 0; border-bottom: 1px solid rgba(248, 235, 201, .45); display: flex; flex-direction: column; gap: 6px; }
+.strip p { font-family: var(--font-title); font-size: 1.12rem; line-height: 1.32; }
+.strip span { font-size: .85rem; font-weight: 600; letter-spacing: .02em; opacity: .92; }
+.t-note { margin-top: 18px; font-size: .82rem; opacity: .85; }
