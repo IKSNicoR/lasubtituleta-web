@@ -115,3 +115,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [role="tab"]:focus
 .quote blockquote { margin: 0; padding-left: 14px; border-left: 3px solid var(--red); font-size: .98rem; line-height: 1.5; }
 .quote figcaption { margin-top: 8px; padding-left: 17px; font-size: .85rem; font-weight: 600; letter-spacing: .02em; opacity: .8; }
 .quote .tr { font-weight: 400; opacity: .85; }
+
+/* Elegí tu motor */
+.sec-sub { margin-top: clamp(16px, 2vw, 24px); max-width: 60ch; font-size: clamp(1.0625rem, 1.4vw, 1.2rem); opacity: .92; text-wrap: pretty; }
+.engines { list-style: none; margin: clamp(32px, 5vw, 56px) 0 0; padding: 0; display: grid; gap: clamp(14px, 2vw, 22px); grid-template-columns: 1fr; }
+@media (min-width: 760px) { .engines { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1360px) { .engines { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.engine { background: var(--cream); color: var(--navy); border-radius: var(--radius); padding: clamp(22px, 2.4vw, 30px); display: flex; flex-direction: column; gap: 14px; }
+.engine h3 { font-size: clamp(1.3rem, 1.8vw, 1.55rem); font-weight: 800; line-height: 1.1; }
+.engine h3 span { display: block; font-weight: 400; font-size: .75em; margin-top: 2px; }
+.engine-does { font-size: 1rem; line-height: 1.5; }
+.engine-credit { display: flex; flex-direction: column; gap: 2px; padding: 14px 0; border-top: 2px solid var(--navy); border-bottom: 2px solid var(--navy); margin-top: 4px; }
+.credit-kicker { font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--red); }
+.engine-credit strong { font-family: var(--font-title); font-weight: 800; font-size: clamp(1.4rem, 2vw, 1.75rem); line-height: 1.15; }
+.credit-sub { font-size: .92rem; opacity: .85; }
+.engine-note { font-size: .875rem; line-height: 1.45; opacity: .85; margin-top: -4px; }
+.engine .btn { width: 100%; padding-inline: 14px; margin-top: auto; }
+.foot { margin-top: clamp(24px, 3vw, 36px); font-size: .875rem; line-height: 1.55; max-width: 70ch; opacity: .75; }
