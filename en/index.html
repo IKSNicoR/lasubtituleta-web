@@ -101,36 +101,33 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   </section>
   <section class="sec sec-navy" id="engine" aria-labelledby="t-engine">
     <div class="wrap">
-      <h2 class="sec-title" id="t-engine">
-        <span class="h-reg">Pick your engine.</span>
-        <span class="h-bold">Start free with one.</span>
+      <h2 class="sec-title free-title" id="t-engine">
+        <span class="h-reg">La Subtituleta is</span>
+        <span class="h-bold">completely free.</span>
       </h2>
-      <p class="sec-sub">You connect your own API, and every provider gives you free credit to get started. More than enough to subtitle a whole season. No credit card needed.</p>
+      <p class="sec-sub"><span class="ln">The extension costs nothing: not now, not later, no paid version.</span> <span class="ln">To transcribe it uses a provider's AI, with your own account, and every provider gives you plenty of free hours to get started.</span> <span class="ln">No credit card.</span> <span class="ln">If you ever use them up, each provider has its own prices. We don't charge or earn anything.</span></p>
+
+      <h3 class="engines-title"><span class="h-bold ln">Pick your AI engine.</span> <span class="h-reg ln">Connect your account and you're set.</span> <span class="h-reg ln">One is enough.</span></h3>
       <ul class="engines">
         <li class="engine on-cream">
           <h3 class="brand"><span class="logo-mark logo-elevenlabs" role="img" aria-label="ElevenLabs"></span><span class="model">Scribe V2</span></h3>
           <p class="engine-does">The best ear for Rioplatense Spanish (Argentina, Uruguay): regional slang, nicknames and tough proper names.</p>
-          <p class="engine-credit"><span class="credit-kicker">Free every month</span><strong>2.5 hours</strong><span class="credit-sub">approx., of audio per month</span></p>
-          <p class="engine-note">For paid work you need their plan, from USD 6/month.</p>
-          <a class="btn btn-primary" href="https://elevenlabs.io/app/settings/api-keys" target="_blank" rel="noopener" data-provider="elevenlabs">Get my API key</a>
+          <p class="engine-credit"><span class="credit-kicker">Free from ElevenLabs</span><strong>2.5 hours per month</strong><span class="credit-sub">every month, no credit card</span></p>
         </li>
         <li class="engine on-cream">
           <h3 class="brand"><span class="logo-mark logo-speechmatics" role="img" aria-label="Speechmatics"></span><span class="model">Enhanced</span></h3>
           <p class="engine-does">The best for interviews and multi-voice recordings: it separates speakers really well.</p>
-          <p class="engine-credit"><span class="credit-kicker">Free</span><strong>USD 100</strong><span class="credit-sub">about 250 hours of audio</span></p>
-          <a class="btn btn-primary" href="https://portal.speechmatics.com/signup/" target="_blank" rel="noopener" data-provider="speechmatics">Get my API key</a>
+          <p class="engine-credit"><span class="credit-kicker">Free from Speechmatics</span><strong>About 250 hours</strong><span class="credit-sub">USD 100 credit, no credit card</span></p>
         </li>
         <li class="engine on-cream">
           <h3 class="brand"><span class="logo-mark logo-assemblyai" role="img" aria-label="AssemblyAI"></span><span class="model">Universal 3.5 Pro</span></h3>
           <p class="engine-does">The cleanest output: tidy punctuation, ready-to-use numbers and recognized acronyms.</p>
-          <p class="engine-credit"><span class="credit-kicker">Free</span><strong>USD 50</strong><span class="credit-sub">about 200 hours of audio</span></p>
-          <a class="btn btn-primary" href="https://www.assemblyai.com/dashboard/signup" target="_blank" rel="noopener" data-provider="assemblyai">Get my API key</a>
+          <p class="engine-credit"><span class="credit-kicker">Free from AssemblyAI</span><strong>About 200 hours</strong><span class="credit-sub">USD 50 credit, no credit card</span></p>
         </li>
         <li class="engine on-cream">
           <h3 class="brand"><span class="logo-mark logo-deepgram" role="img" aria-label="Deepgram"></span><span class="model">Nova 3</span></h3>
           <p class="engine-does">The biggest free credit to get started.</p>
-          <p class="engine-credit"><span class="credit-kicker">Free</span><strong>USD 200</strong><span class="credit-sub">over 600 hours of audio</span></p>
-          <a class="btn btn-primary" href="https://console.deepgram.com/signup" target="_blank" rel="noopener" data-provider="deepgram">Get my API key</a>
+          <p class="engine-credit"><span class="credit-kicker">Free from Deepgram</span><strong>Over 600 hours</strong><span class="credit-sub">USD 200 credit, no credit card</span></p>
         </li>
       </ul>
       <p class="foot">Based on our benchmark with a real 48-minute show with two voices. A guide, not a rule. ElevenLabs is the only one whose free credit renews every month.</p>
@@ -276,7 +273,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         <span class="h-bold">ask us most.</span>
       </h2>
       <div class="faq">
-        <details class="qa"><summary>Is it free?</summary><div class="qa-body"><p>Yes, La Subtituleta is free forever. What can cost money is the AI provider you pick, but they all give you free credit to start: roughly 200 to over 600 hours of audio with AssemblyAI, Speechmatics and Deepgram, and about 2.5 hours per month with ElevenLabs.</p></div></details>
+        <details class="qa"><summary>Is it free?</summary><div class="qa-body"><p>Yes, completely free, forever. The extension has no paid version and we charge nothing. The only thing that can cost money is the AI provider you pick, and they all give you free credit to start: roughly 200 to over 600 hours of audio with AssemblyAI, Speechmatics and Deepgram, and about 2.5 hours per month with ElevenLabs.</p></div></details>
         <details class="qa"><summary>What is an API key?</summary><div class="qa-body"><p>It's a password the AI provider gives you so La Subtituleta can send your audio to them and get the text back. You get it yourself, for free, by creating an account with the provider (usually your email or Google login is enough). It's a long code you copy and paste once into the extension's gear menu, and it stays on your computer. It's personal: don't share it with anyone, not even me.</p></div></details>
         <details class="qa"><summary>Do I need a credit card?</summary><div class="qa-body"><p>Not to get started. No provider asks for one to get the API key and use the free credit. Later, if you run out of credit, they may ask for one (see below).</p></div></details>
         <details class="qa"><summary>What happens when the credit runs out?</summary><div class="qa-body"><p>The credit from AssemblyAI, Speechmatics and Deepgram is a one-time starting credit per account and doesn't renew (ElevenLabs does, every month). When it's gone: AssemblyAI asks you to add funds or turn on billing, Speechmatics asks you to add a card and moves to pay-as-you-go, and Deepgram moves to pay-as-you-go. It costs roughly USD 0.20 to 0.40 per hour of audio. You never pay La Subtituleta anything.</p></div></details>

@@ -101,39 +101,36 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   </section>
   <section class="sec sec-navy" id="motor" aria-labelledby="t-motor">
     <div class="wrap">
-      <h2 class="sec-title" id="t-motor">
-        <span class="h-reg">Elegí tu motor.</span>
-        <span class="h-bold">Empezá gratis con uno.</span>
+      <h2 class="sec-title free-title" id="t-motor">
+        <span class="h-reg">La Subtituleta es</span>
+        <span class="h-bold">completamente gratis.</span>
       </h2>
-      <p class="sec-sub">Conectás tu propia API y cada proveedor te regala crédito para arrancar. Más que suficiente para subtitular una temporada entera. Sin tarjeta de crédito.</p>
+      <p class="sec-sub"><span class="ln">La extensión no cuesta nada: ni ahora, ni después, ni versión paga.</span> <span class="ln">Para transcribir usa la IA de un proveedor, con tu propia cuenta, y todos te regalan horas de sobra para empezar.</span> <span class="ln">Sin tarjeta.</span> <span class="ln">Si algún día las gastás, cada proveedor tiene sus propios precios. Nosotros no cobramos ni ganamos nada.</span></p>
+
+      <h3 class="engines-title"><span class="h-bold ln">Elegí tu motor de IA.</span> <span class="h-reg ln">Conectás tu cuenta y listo.</span> <span class="h-reg ln">Con una alcanza.</span></h3>
       <ul class="engines">
         <li class="engine on-cream">
           <h3 class="brand"><span class="logo-mark logo-elevenlabs" role="img" aria-label="ElevenLabs"></span><span class="model">Scribe V2</span></h3>
           <p class="engine-does">El mejor oído para el español rioplatense: voseo, apodos y nombres propios.</p>
-          <p class="engine-credit"><span class="credit-kicker">Gratis todos los meses</span><strong>2,5 horas</strong><span class="credit-sub">aprox., de audio por mes</span></p>
-          <p class="engine-note">Para trabajos pagos, plan desde USD 6/mes.</p>
-          <a class="btn btn-primary" href="https://elevenlabs.io/app/settings/api-keys" target="_blank" rel="noopener" data-provider="elevenlabs">Conseguir mi API key</a>
+          <p class="engine-credit"><span class="credit-kicker">Regalo de ElevenLabs</span><strong>2,5 horas por mes</strong><span class="credit-sub">todos los meses, sin tarjeta</span></p>
         </li>
         <li class="engine on-cream">
           <h3 class="brand"><span class="logo-mark logo-speechmatics" role="img" aria-label="Speechmatics"></span><span class="model">Enhanced</span></h3>
           <p class="engine-does">El mejor para entrevistas y varias voces: separa muy bien a los hablantes.</p>
-          <p class="engine-credit"><span class="credit-kicker">Gratis</span><strong>USD 100</strong><span class="credit-sub">unas 250 horas de audio</span></p>
-          <a class="btn btn-primary" href="https://portal.speechmatics.com/signup/" target="_blank" rel="noopener" data-provider="speechmatics">Conseguir mi API key</a>
+          <p class="engine-credit"><span class="credit-kicker">Regalo de Speechmatics</span><strong>Unas 250 horas</strong><span class="credit-sub">USD 100 de crédito, sin tarjeta</span></p>
         </li>
         <li class="engine on-cream">
           <h3 class="brand"><span class="logo-mark logo-assemblyai" role="img" aria-label="AssemblyAI"></span><span class="model">Universal 3.5 Pro</span></h3>
           <p class="engine-does">El más prolijo: puntuación limpia, cifras listas y siglas reconocidas.</p>
-          <p class="engine-credit"><span class="credit-kicker">Gratis</span><strong>USD 50</strong><span class="credit-sub">unas 200 horas de audio</span></p>
-          <a class="btn btn-primary" href="https://www.assemblyai.com/dashboard/signup" target="_blank" rel="noopener" data-provider="assemblyai">Conseguir mi API key</a>
+          <p class="engine-credit"><span class="credit-kicker">Regalo de AssemblyAI</span><strong>Unas 200 horas</strong><span class="credit-sub">USD 50 de crédito, sin tarjeta</span></p>
         </li>
         <li class="engine on-cream">
           <h3 class="brand"><span class="logo-mark logo-deepgram" role="img" aria-label="Deepgram"></span><span class="model">Nova 3</span></h3>
-          <p class="engine-does">El crédito gratis más grande para arrancar.</p>
-          <p class="engine-credit"><span class="credit-kicker">Gratis</span><strong>USD 200</strong><span class="credit-sub">más de 600 horas de audio</span></p>
-          <a class="btn btn-primary" href="https://console.deepgram.com/signup" target="_blank" rel="noopener" data-provider="deepgram">Conseguir mi API key</a>
+          <p class="engine-does">El regalo más grande para arrancar.</p>
+          <p class="engine-credit"><span class="credit-kicker">Regalo de Deepgram</span><strong>Más de 600 horas</strong><span class="credit-sub">USD 200 de crédito, sin tarjeta</span></p>
         </li>
       </ul>
-      <p class="foot">Basado en nuestro benchmark con un programa real de 48 minutos y dos voces. Es una guía, no una regla. ElevenLabs es el único que renueva el crédito cada mes.</p>
+      <p class="foot">Basado en nuestro benchmark con un programa real de 48 minutos y dos voces. Es una guía, no una regla. ElevenLabs es el único que renueva el regalo cada mes.</p>
     </div>
   </section>
   <section class="sec sec-navy install" id="instalacion" aria-labelledby="t-install">
@@ -276,7 +273,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
       </h2>
       <div class="faq">
         <details class="qa"><summary>¿Qué es una API key?</summary><div class="qa-body"><p>Es una contraseña que te da el proveedor de IA para que La Subtituleta le pueda mandar tu audio y recibir el texto. La sacás vos, gratis, creando una cuenta en el proveedor (en general alcanza con tu mail o con Google). Es un código largo que copiás y pegás una sola vez en el engranaje de la extensión, y queda guardado en tu computadora. Es personal: no se la des a nadie, ni a mí.</p></div></details>
-        <details class="qa"><summary>¿Es gratis?</summary><div class="qa-body"><p>Sí, La Subtituleta es gratis para siempre. Lo que puede cobrar es el proveedor de IA que elijas, pero todos te regalan crédito para empezar: entre unas 200 y más de 600 horas de audio en AssemblyAI, Speechmatics y Deepgram, y unas 2 horas y media por mes en ElevenLabs.</p></div></details>
+        <details class="qa"><summary>¿Es gratis?</summary><div class="qa-body"><p>Sí, completamente gratis, para siempre. La extensión no tiene versión paga y nosotros no cobramos nada. Lo único que puede cobrar es el proveedor de IA que elijas, y todos te regalan crédito para empezar: entre unas 200 y más de 600 horas de audio en AssemblyAI, Speechmatics y Deepgram, y unas 2 horas y media por mes en ElevenLabs.</p></div></details>
         <details class="qa"><summary>¿Necesito tarjeta de crédito?</summary><div class="qa-body"><p>No para empezar. Ningún proveedor la pide para sacar la API key y usar el crédito gratis. Más adelante, si se te acaba el crédito, sí puede pedirla (ver abajo).</p></div></details>
         <details class="qa"><summary>¿Qué pasa cuando se acaba el crédito?</summary><div class="qa-body"><p>El crédito de AssemblyAI, Speechmatics y Deepgram es inicial, uno por cuenta, y no se renueva (el de ElevenLabs sí, cada mes). Cuando se agota: AssemblyAI te pide cargar saldo o activar el pago, Speechmatics te pide agregar una tarjeta y pasa a pago por uso, y Deepgram pasa a pago por uso. Cuesta entre USD 0,20 y 0,40 por hora de audio. A La Subtituleta nunca le pagás nada.</p></div></details>
         <details class="qa"><summary>Subtitulo mucho contenido, ¿me alcanza el crédito gratis?</summary><div class="qa-body"><p>Probalo y medilo: transcribí un par de videos, mirá cuánto crédito gastaste en el panel de tu proveedor y calculá cuánto te sale por hora. Si lo usás todos los meses, comparalo con las horas que hoy te lleva corregir a mano. Y podés repartir el trabajo entre varios proveedores.</p></div></details>

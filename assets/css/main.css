@@ -362,3 +362,34 @@ code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; backgrou
 /* Menos aire entre "Elegí tu motor" e "Instalación" (ambas azules) */
 section#motor, section#engine { padding-bottom: clamp(24px, 4vw, 48px); }
 .sec-navy.install { padding-top: clamp(32px, 5vw, 64px); }
+
+/* Elegí tu motor v3: "La Subtituleta es completamente gratis" (2026-10-03) */
+.free-title { font-size: clamp(1.5rem, 5.4vw, 4rem); line-height: 1.06; max-width: none; letter-spacing: -.015em; }
+.free-title span { white-space: nowrap; }
+.free-title .h-bold { margin-top: .04em; }
+.price { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 44px); margin-top: clamp(32px, 5vw, 56px); }
+.price-cell { border-top: 2px solid var(--cream); padding-top: 18px; }
+.price-label { font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; opacity: .85; }
+.price-value { font-family: var(--font-title); font-weight: 800; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.05; margin-top: 8px; }
+.price-value-text { font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.15; padding-top: .35em; }
+.price-text { margin-top: 10px; font-size: 1rem; line-height: 1.5; max-width: 34ch; opacity: .92; }
+@media (max-width: 800px) { .price { grid-template-columns: 1fr; gap: 26px; } .price-text { max-width: none; } }
+
+.engines-title { margin-top: clamp(48px, 7vw, 88px); font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.2; font-weight: 400; max-width: 40ch; }
+.engines-title .h-bold { font-weight: 800; }
+.engines-title .h-reg { font-weight: 400; }
+.engines { margin-top: clamp(20px, 3vw, 32px); }
+.engine-credit { margin-top: auto; }
+.engine-note { margin-top: 0; }
+.perspective { margin-top: clamp(28px, 4vw, 44px); max-width: 56ch; font-size: clamp(1.1rem, 1.7vw, 1.35rem); line-height: 1.45; font-weight: 600; }
+
+/* v3.1: frases completas, sin huérfanas */
+.free-title+.sec-sub{max-width:none}
+.sec-sub .ln{display:block;text-wrap:pretty}
+.sec-sub .ln+.ln{margin-top:.6em}
+.sec-sub .ln+.ln:nth-of-type(3){margin-top:.1em}
+.engines-title{max-width:none}
+.engines-title .ln{display:block}
+.engines-title .ln+.ln{margin-top:.1em}
+.engines{margin-top:clamp(24px,3.5vw,40px)}
+.credit-sub,.engine-does,.foot{text-wrap:balance}
