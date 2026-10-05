@@ -393,3 +393,11 @@ section#motor, section#engine { padding-bottom: clamp(24px, 4vw, 48px); }
 .engines-title .ln+.ln{margin-top:.1em}
 .engines{margin-top:clamp(24px,3.5vw,40px)}
 .credit-sub,.engine-does,.foot{text-wrap:balance}
+
+/* FAQ de errores */
+.qa-err{margin-top:1.1em}
+.qa-err strong{display:block;font-weight:800}
+.qa-err .ln{display:block}
+.qa-err .ln+.ln{margin-top:.15em}
+.qa-err strong.inl{display:inline}
+.qa-err .ln{text-wrap:pretty}
