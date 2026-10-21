@@ -401,3 +401,7 @@ section#motor, section#engine { padding-bottom: clamp(24px, 4vw, 48px); }
 .qa-err .ln+.ln{margin-top:.15em}
 .qa-err strong.inl{display:inline}
 .qa-err .ln{text-wrap:pretty}
+
+/* Aprendé a usarla: fila de tres (2026-10-21) */
+@media (min-width: 900px) { .tuts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.tut p{text-wrap:pretty}
