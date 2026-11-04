@@ -56,6 +56,7 @@
     var a = e.target.closest ? e.target.closest('a') : null;
     if (!a) return;
     if (a.dataset.os) track('download_click', { os: a.dataset.os, placement: placementOf(a) });
+    else if (a.dataset.support) track('support_click', { to: a.dataset.support });
     else if (a.dataset.provider) track('api_key_click', { provider: a.dataset.provider });
     else if (a.dataset.video) track('video_click', { video: a.dataset.video, placement: a.closest('.tuts') ? 'tutoriales' : (a.closest('.cards') ? 'que-hace' : 'otro') });
     else if (a.closest('.lang')) track('language_switch', { to: a.getAttribute('lang') });

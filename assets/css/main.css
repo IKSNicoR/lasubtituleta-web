@@ -407,3 +407,9 @@ section#motor, section#engine { padding-bottom: clamp(24px, 4vw, 48px); }
 .tut p{text-wrap:pretty}
 
 .hero-sub{text-wrap:balance}
+
+/* Colaborar: sección con botón a Cafecito (2026-11-04) */
+.support { padding-block: clamp(48px, 7vw, 88px); }
+.support .cta { margin-top: clamp(20px, 3vw, 32px); }
+.support .sec-title.one-line .h-reg, .support .sec-title.one-line .h-bold { display: block; }
+.support .btn { text-align: center; text-wrap: balance; }
